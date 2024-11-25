@@ -12,34 +12,34 @@ Warning--entry type for "tomshardware2023" isn't style-file defined
 Warning--can't use both volume and number fields in singh2021keylogger
 You've used 12 entries,
             2773 wiz_defined-function locations,
-            663 strings with 7610 characters,
-and the built_in function-call counts, 5921 in all, are:
-= -- 538
-> -- 326
+            663 strings with 7476 characters,
+and the built_in function-call counts, 5871 in all, are:
+= -- 535
+> -- 317
 < -- 14
-+ -- 111
-- -- 99
-* -- 438
-:= -- 876
++ -- 108
+- -- 96
+* -- 432
+:= -- 867
 add.period$ -- 43
 call.type$ -- 12
-change.case$ -- 68
+change.case$ -- 67
 chr.to.int$ -- 12
 cite$ -- 25
 duplicate$ -- 286
 empty$ -- 497
-format.name$ -- 117
-if$ -- 1291
+format.name$ -- 114
+if$ -- 1282
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 9
 newline$ -- 70
 num.names$ -- 48
-pop$ -- 159
+pop$ -- 157
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 55
 quote$ -- 0
-skip$ -- 229
+skip$ -- 228
 stack$ -- 0
 substring$ -- 168
 swap$ -- 59

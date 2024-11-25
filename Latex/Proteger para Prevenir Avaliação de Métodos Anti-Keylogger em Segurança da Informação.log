@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.23)  25 NOV 2024 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.23)  25 NOV 2024 20:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,14 +265,14 @@ Underfull \hbox (badness 3009) in paragraph at lines 267--268
 []\OT1/ptm/m/n/12 O \OT1/ptm/b/n/12 Malwa-reby-tes\OT1/ptm/m/n/12 , da Malwa-reby-tes Inc., []e uma fer-ra-menta de-di-cada []a
  []
 
-
-
-[10]
-<imgs/ViruzTotal.png, id=40, 1758.57pt x 821.0675pt>
+<imgs/ViruzTotal.png, id=37, 1758.57pt x 821.0675pt>
 File: imgs/ViruzTotal.png Graphic file (type png)
 <use imgs/ViruzTotal.png>
 Package pdftex.def Info: imgs/ViruzTotal.png  used on input line 281.
 (pdftex.def)             Requested size: 426.79135pt x 199.26523pt.
+
+
+[10]
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 307.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
@@ -283,25 +283,18 @@ File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 [12]
 
 [13] (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.bbl
-Underfull \hbox (badness 5245) in paragraph at lines 29--34
-[]\OT1/ptm/m/n/12 Surayahani Has-nul Bhaha-rin, Umi Asma'Mokhtar, Ros-si-lawati Su-lai-man, and
- []
-
-
-Underfull \hbox (badness 1742) in paragraph at lines 52--57
+Underfull \hbox (badness 1742) in paragraph at lines 49--54
 []\OT1/ptm/m/n/12 Security In-tel-li-gence.  10 bil-lion in cy-ber crime los-ses shat-ters pre-vi-ous to-tals
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--57
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 \OT1/ptm/m/n/12 url:https://securityintelligence.com/news/10-billion-in-cyber-crime-losses-shatters-
  []
 
+)
 
-
-[14])
-
-[15] (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.aux)
+[14] (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -310,15 +303,15 @@ L3 programming layer <2024-11-02>
 Here is how much of TeX's memory you used:
  4665 strings out of 473682
  80873 string characters out of 5719215
- 496950 words of memory out of 5000000
+ 496945 words of memory out of 5000000
  27670 multiletter control sequences out of 15000+600000
  577423 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,10n,79p,1195b,356s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.pdf" (15 pages, 246419 bytes).
+Output written on "Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.pdf" (14 pages, 244914 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

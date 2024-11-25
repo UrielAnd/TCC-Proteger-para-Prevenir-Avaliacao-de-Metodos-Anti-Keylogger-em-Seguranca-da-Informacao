@@ -6,19 +6,25 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[Ahmed et~al.(2014)Ahmed, Maarof, Hassan, and Abshir]{ahmed2014survey}
-Yahye~Abukar Ahmed, Mohd~Aizaini Maarof, Fuad~Mire Hassan, and Mohamed~Muse
-  Abshir.
+Ahmed, Mohd~Aizaini Maarof, Fuad~Mire Hassan, and Mohamed~Muse Abshir.
 \newblock Survey of keylogger technologies.
 \newblock \emph{International journal of computer science and
   telecommunications}, 5\penalty0 (2), 2014.
 
+\bibitem[Arun and Singh(2018)]{singh2018infringement}
+Arun and Vaishali Singh.
+\newblock Infringement of prevention technique against keyloggers using sift
+  attack.
+\newblock In \emph{2018 International Conference on Advanced Computation and
+  Telecommunication (ICACAT)}, pages 1--4. IEEE, 2018.
+
 \bibitem[Aslan and Samet(2020)]{aslan2020comprehensive}
-{\"O}mer~Aslan Aslan and Refik Samet.
+Aslan and Refik Samet.
 \newblock A comprehensive review on malware detection approaches.
 \newblock \emph{IEEE access}, 8:\penalty0 6249--6271, 2020.
 
 \bibitem[Aydin(2024)]{Aydinnyunus}
-Yunus Aydin.
+Aydin.
 \newblock Keylogger detection and mitigation methods: Code for research and
   analysis url:https://github.com/aydinnyunus/keylogger.
 \newblock GitHub repository, 2024.
@@ -26,27 +32,18 @@ Yunus Aydin.
 
 \bibitem[Bhaharin et~al.(2019)Bhaharin, Asma’Mokhtar, Sulaiman, and
   Yusof]{bhaharin2019issues}
-Surayahani~Hasnul Bhaharin, Umi Asma’Mokhtar, Rossilawati Sulaiman, and
-  Maryati~Mohd Yusof.
+Bhaharin, Umi Asma’Mokhtar, Rossilawati Sulaiman, and Maryati~Mohd Yusof.
 \newblock Issues and trends in information security policy compliance.
 \newblock In \emph{2019 6th International Conference on Research and Innovation
   in Information Systems (ICRIIS)}, pages 1--6. IEEE, 2019.
 
-\bibitem[C. et~al.(2023)C., A., and A.]{10124477}
-Ekele~Victoria C., Adebiyi~Ayodele A., and Adebiyi~Ayodele A.
+\bibitem[Ekele et~al.(2023)Ekele, A., and A.]{10124477}
+Ekele, Adebiyi~Ayodele A., and Adebiyi~Ayodele A.
 \newblock Keylogger detection: A systematic review.
 \newblock In \emph{2023 International Conference on Science, Engineering and
   Business for Sustainable Development Goals (SEB-SDG)}, volume~1, pages 1--6,
   2023.
 \newblock \doi{10.1109/SEB-SDG57117.2023.10124477}.
-
-\bibitem[Hardware(2023)]{tomshardware2023}
-Tom's Hardware.
-\newblock Windows 11 market share declines as users seemingly shift back to
-  windows 10
-  url:https://www.tomshardware.com/software/operating-systems/windows-11-market-share-declines-as-users-seemingly-shift-back-to-windows-10,
-  2023.
-\newblock Acessado em: 23 nov. 2024.
 
 \bibitem[Intelligence(2023)]{securityintelligence2023}
 Security Intelligence.
@@ -56,34 +53,35 @@ Security Intelligence.
 \newblock Acesso em: nov. 2024.
 
 \bibitem[Singh et~al.(2021)Singh, Choudhary, et~al.]{singh2021keylogger}
-Arjun Singh, Pushpa Choudhary, et~al.
+Singh, Pushpa Choudhary, et~al.
 \newblock Keylogger detection and prevention.
 \newblock In \emph{Journal of Physics: Conference Series}, volume 2007, page
   012005. IOP Publishing, 2021.
 
-\bibitem[Singh and Singh(2018)]{singh2018infringement}
-Arun~Pratap Singh and Vaishali Singh.
-\newblock Infringement of prevention technique against keyloggers using sift
-  attack.
-\newblock In \emph{2018 International Conference on Advanced Computation and
-  Telecommunication (ICACAT)}, pages 1--4. IEEE, 2018.
-
 \bibitem[Solairaj et~al.(2016)Solairaj, Prabanand, Mathalairaj, Prathap, and
   Vignesh]{solairaj2016keyloggers}
-A~Solairaj, SC~Prabanand, J~Mathalairaj, C~Prathap, and LS~Vignesh.
+Solairaj, SC~Prabanand, J~Mathalairaj, C~Prathap, and LS~Vignesh.
 \newblock Keyloggers software detection techniques.
 \newblock In \emph{2016 10th International Conference on Intelligent Systems
   and Control (ISCO)}, pages 1--6. IEEE, 2016.
 
+\bibitem[Tom's(2023)]{tomshardware2023}
+Tom's.
+\newblock Windows 11 market share declines as users seemingly shift back to
+  windows 10
+  url:https://www.tomshardware.com/software/operating-systems/windows-11-market-share-declines-as-users-seemingly-shift-back-to-windows-10,
+  2023.
+\newblock Acessado em: 23 nov. 2024.
+
 \bibitem[Tuli and Sahu(2013)]{tuli2013system}
-Preeti Tuli and Priyanka Sahu.
+Tuli and Priyanka Sahu.
 \newblock System monitoring and security using keylogger.
 \newblock \emph{International Journal of Computer Science and Mobile
   Computing}, 2\penalty0 (3):\penalty0 106--111, 2013.
 
-\bibitem[Wajahat et~al.(2019)Wajahat, Imran, Latif, Nazir, and
+\bibitem[Wajahat et~al.(2019)Wajahat, Latif, Nazir, and
   Bilal]{wajahat2019novel}
-Ahsan Wajahat, Azhar Imran, Jahanzaib Latif, Ahsan Nazir, and Anas Bilal.
+Wajahat, Jahanzaib Latif, Ahsan Nazir, and Anas Bilal.
 \newblock A novel approach of unprivileged keylogger detection.
 \newblock In \emph{2019 2nd International Conference on Computing, Mathematics
   and Engineering Technologies (iCoMET)}, pages 1--6. IEEE, 2019.

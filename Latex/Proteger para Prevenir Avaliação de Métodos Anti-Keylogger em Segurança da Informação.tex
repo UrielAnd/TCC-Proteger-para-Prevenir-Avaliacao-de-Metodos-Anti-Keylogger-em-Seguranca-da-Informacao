@@ -145,7 +145,7 @@ O sistema operacional selecionado para a virtualização e para rodar os testes 
 Essa vasta adoção permite que os testes realizados reflitam cenários mais próximos da realidade, aumentando a relevância das análises e conclusões obtidas em relação à proteção contra ameaças em ambientes reais
 
 \subsubsection{Visual studio code}
-Para análise do código \textit{keylogger} foi utilizado o Visual Studio Code (VS Code 1.94), ferramenta criada pela Microsoft e escolhida por sua versatilidade e adequação para revisão, teste e modificação de código. Esta ferramenta fornece funções como realce de sintaxe e pesquisa inteligente, permitindo compreender mais facilmente a estrutura e lógica do \textit{keylogger}. Além disso, suas ferramentas de depuração integradas facilitam o monitoramento do comportamento do sistema em tempo real enquanto realizam testes controlados em um ambiente dedicado para garantir uma operação segura. Mudanças de teste foram implementadas no código, facilitando o teste de configurações e diversos recursos. Portanto, o VS Code desempenha um papel importante na análise do \textit{keylogger} de forma clara e segura, ajudando a avaliar os métodos anti-textit{keylogger} examinados neste estudo.
+O Visual Studio Code (VS Code 1.94), criado pela Microsoft, foi utilizado para analisar o código do keylogger devido à sua versatilidade. Com recursos como realce de sintaxe, pesquisa inteligente e depuração integrada, facilitou a revisão, testes e avaliação do keylogger escolhido para os testes.
 
 \subsection{Seleção do \textit{keylogger}}
 Para esta parte do projeto, envolve uma busca e seleção de um código de \textit{keylogger} já existente, que será utilizado como base para a realização dos testes e validações necessárias. O objetivo é encontrar um código que implemente as funcionalidades básicas de um \textit{keylogger}, permitindo assim concentrar esforços nas etapas de testes, depuração e validação, sem a necessidade de desenvolvimento inicial do código. Uma vez identificado o código, as etapas do processo incluem:
@@ -369,8 +369,7 @@ Nenhum dos programas antivírus testados detecta o arquivo \texttt{.xlsm} como m
 
 De acordo com os resultados obtidos, verifica-se que a eficácia da proteção varia dependendo do método de infecção utilizado pelo \textit{keylogger} e do tipo de arquivos maliciosos.
 
-\subsection*{Resultados Quantitativos}
-\textbf{Arquivos \texttt{.exe}:} Avast, AVG e Total AV bloquearam 100\% dos arquivos, enquanto o Windows Defender teve desempenho inconsistente.
+\noindent\textbf{Arquivos \texttt{.exe}:} Avast, AVG e Total AV bloquearam 100\% dos arquivos, enquanto o Windows Defender teve desempenho inconsistente.
 
 \noindent\textbf{Arquivos \texttt{.zip}:} Embora algumas ferramentas detectassem o \textit{malware} após extração, a proteção foi insuficiente durante o download do arquivo compactado.
 
