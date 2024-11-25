@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,13 @@ Yahye~Abukar Ahmed, Mohd~Aizaini Maarof, Fuad~Mire Hassan, and Mohamed~Muse
 {\"O}mer~Aslan Aslan and Refik Samet.
 \newblock A comprehensive review on malware detection approaches.
 \newblock \emph{IEEE access}, 8:\penalty0 6249--6271, 2020.
+
+\bibitem[Aydin(2024)]{Aydinnyunus}
+Yunus Aydin.
+\newblock Keylogger detection and mitigation methods: Code for research and
+  analysis url:https://github.com/aydinnyunus/keylogger.
+\newblock GitHub repository, 2024.
+\newblock Accessed: Nov. 2024.
 
 \bibitem[Bhaharin et~al.(2019)Bhaharin, Asma’Mokhtar, Sulaiman, and
   Yusof]{bhaharin2019issues}
@@ -54,6 +61,13 @@ Arjun Singh, Pushpa Choudhary, et~al.
 \newblock In \emph{Journal of Physics: Conference Series}, volume 2007, page
   012005. IOP Publishing, 2021.
 
+\bibitem[Singh and Singh(2018)]{singh2018infringement}
+Arun~Pratap Singh and Vaishali Singh.
+\newblock Infringement of prevention technique against keyloggers using sift
+  attack.
+\newblock In \emph{2018 International Conference on Advanced Computation and
+  Telecommunication (ICACAT)}, pages 1--4. IEEE, 2018.
+
 \bibitem[Solairaj et~al.(2016)Solairaj, Prabanand, Mathalairaj, Prathap, and
   Vignesh]{solairaj2016keyloggers}
 A~Solairaj, SC~Prabanand, J~Mathalairaj, C~Prathap, and LS~Vignesh.
@@ -73,12 +87,5 @@ Ahsan Wajahat, Azhar Imran, Jahanzaib Latif, Ahsan Nazir, and Anas Bilal.
 \newblock A novel approach of unprivileged keylogger detection.
 \newblock In \emph{2019 2nd International Conference on Computing, Mathematics
   and Engineering Technologies (iCoMET)}, pages 1--6. IEEE, 2019.
-
-\bibitem[Yunus(2024)]{Aydinnyunus}
-AYDIN Yunus.
-\newblock Keylogger detection and mitigation methods: Code for research and
-  analysis url:https://github.com/aydinnyunus/keylogger.
-\newblock GitHub repository, 2024.
-\newblock Accessed: Nov. 2024.
 
 \end{thebibliography}

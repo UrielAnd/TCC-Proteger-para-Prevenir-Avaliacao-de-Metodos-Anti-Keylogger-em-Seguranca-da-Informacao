@@ -6,49 +6,49 @@ The style file: plainnat.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: sbc-template.bib
 Warning--entry type for "securityintelligence2023" isn't style-file defined
---line 76 of file sbc-template.bib
+--line 151 of file sbc-template.bib
 Warning--entry type for "tomshardware2023" isn't style-file defined
---line 83 of file sbc-template.bib
+--line 165 of file sbc-template.bib
 Warning--can't use both volume and number fields in singh2021keylogger
-You've used 11 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            657 strings with 7386 characters,
-and the built_in function-call counts, 5411 in all, are:
-= -- 487
-> -- 305
-< -- 12
-+ -- 104
-- -- 93
-* -- 406
-:= -- 805
-add.period$ -- 39
-call.type$ -- 11
-change.case$ -- 63
-chr.to.int$ -- 11
-cite$ -- 23
-duplicate$ -- 258
-empty$ -- 450
-format.name$ -- 108
-if$ -- 1173
+            663 strings with 7610 characters,
+and the built_in function-call counts, 5921 in all, are:
+= -- 538
+> -- 326
+< -- 14
++ -- 111
+- -- 99
+* -- 438
+:= -- 876
+add.period$ -- 43
+call.type$ -- 12
+change.case$ -- 68
+chr.to.int$ -- 12
+cite$ -- 25
+duplicate$ -- 286
+empty$ -- 497
+format.name$ -- 117
+if$ -- 1291
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 8
-newline$ -- 65
-num.names$ -- 44
-pop$ -- 146
+missing$ -- 9
+newline$ -- 70
+num.names$ -- 48
+pop$ -- 159
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 56
 quote$ -- 0
-skip$ -- 208
+skip$ -- 229
 stack$ -- 0
-substring$ -- 150
-swap$ -- 52
-text.length$ -- 7
+substring$ -- 168
+swap$ -- 59
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 121
+type$ -- 132
 warning$ -- 1
-while$ -- 49
+while$ -- 55
 width$ -- 0
-write$ -- 157
+write$ -- 171
 (There were 3 warnings)
