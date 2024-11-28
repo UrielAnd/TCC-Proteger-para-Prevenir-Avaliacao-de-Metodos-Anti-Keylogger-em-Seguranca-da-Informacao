@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,7 +28,6 @@ Aydin.
 \newblock Keylogger detection and mitigation methods: Code for research and
   analysis url:https://github.com/aydinnyunus/keylogger.
 \newblock GitHub repository, 2024.
-\newblock Accessed: Nov. 2024.
 
 \bibitem[Bhaharin et~al.(2019)Bhaharin, Asma’Mokhtar, Sulaiman, and
   Yusof]{bhaharin2019issues}
@@ -45,6 +44,18 @@ Ekele, Adebiyi~Ayodele A., and Adebiyi~Ayodele A.
   2023.
 \newblock \doi{10.1109/SEB-SDG57117.2023.10124477}.
 
+\bibitem[Group(2024)]{TotalAV}
+Protected.net Group.
+\newblock Total av antivirus.
+\newblock \url{https://www.totalav.com/}, 2024.
+\newblock Accessed: Nov. 2024.
+
+\bibitem[Inc.(2024)]{Malwarebytes}
+Malwarebytes Inc.
+\newblock Malwarebytes antivirus.
+\newblock \url{https://www.malwarebytes.com/}, 2024.
+\newblock Accessed: Nov. 2024.
+
 \bibitem[Intelligence(2023)]{securityintelligence2023}
 Security Intelligence.
 \newblock 10 billion in cyber crime losses shatters previous totals
@@ -52,11 +63,29 @@ Security Intelligence.
   2023.
 \newblock Acesso em: nov. 2024.
 
+\bibitem[LLC(2024)]{Bitdefender}
+Bitdefender LLC.
+\newblock Bitdefender antivirus.
+\newblock \url{https://www.bitdefender.com/pt-br/}, 2024.
+\newblock Accessed: Nov. 2024.
+
+\bibitem[Microsoft(2024)]{MicrosoftSecurityBlog}
+Microsoft.
+\newblock Microsoft security blog.
+\newblock \url{https://www.microsoft.com/pt-br/security/blog/}, 2024.
+\newblock Accessed: Nov. 2024.
+
 \bibitem[Singh et~al.(2021)Singh, Choudhary, et~al.]{singh2021keylogger}
 Singh, Pushpa Choudhary, et~al.
 \newblock Keylogger detection and prevention.
 \newblock In \emph{Journal of Physics: Conference Series}, volume 2007, page
   012005. IOP Publishing, 2021.
+
+\bibitem[Software(2024)]{Avast}
+Avast Software.
+\newblock Avast antivirus.
+\newblock \url{https://www.avast.com/pt-br/index}, 2024.
+\newblock Accessed: Nov. 2024.
 
 \bibitem[Solairaj et~al.(2016)Solairaj, Prabanand, Mathalairaj, Prathap, and
   Vignesh]{solairaj2016keyloggers}
@@ -64,6 +93,12 @@ Solairaj, SC~Prabanand, J~Mathalairaj, C~Prathap, and LS~Vignesh.
 \newblock Keyloggers software detection techniques.
 \newblock In \emph{2016 10th International Conference on Intelligent Systems
   and Control (ISCO)}, pages 1--6. IEEE, 2016.
+
+\bibitem[Technologies(2024)]{AVG}
+AVG Technologies.
+\newblock Avg antivirus.
+\newblock \url{https://www.avg.com/pt-br/homepage}, 2024.
+\newblock Accessed: Nov. 2024.
 
 \bibitem[Tom's(2023)]{tomshardware2023}
 Tom's.

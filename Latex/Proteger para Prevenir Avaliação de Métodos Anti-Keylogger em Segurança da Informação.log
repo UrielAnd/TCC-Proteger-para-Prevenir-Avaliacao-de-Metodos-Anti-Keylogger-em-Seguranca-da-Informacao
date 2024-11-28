@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.23)  25 NOV 2024 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.23)  28 NOV 2024 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -116,31 +116,40 @@ Package babel Info: Making " an active character on input line 143.
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks20
 \inpenc@posthook=\toks21
+) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count277
+\float@exts=\toks22
+\float@box=\box53
+\@float@everytoks=\toks23
+\@floatcapt=\box54
+) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 42.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 44.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count277
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box55
 ) (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.aux)
 \openout1 = `"Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -178,81 +187,52 @@ LaTeX Font Info:    ... okay on input line 42.
 
 (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
+\scratchcounter=\count279
 \scratchdimen=\dimen162
-\scratchbox=\box54
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count281
+\scratchbox=\box56
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen163
-\MPnumerator=\count282
-\makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks25
 ) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 44.
+(Font)              <12> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 44.
+(Font)              <8> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 44.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 44.
+(Font)              <6> on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 46.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 46.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 48.
 
 
 [1
 
 {C:/Users/uriel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-
-[2]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 81.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 78.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
+[2]
+
 [3]
-Underfull \vbox (badness 3907) has occurred while \output is active []
-
-
 
 [4]
 
 [5]
-Underfull \hbox (badness 1127) in paragraph at lines 145--146
-[]\OT1/ptm/m/n/12 Essa vasta ado[][]ao per-mite que os tes-tes re-a-li-za-dos re-fli-tam cen[]arios mais
- []
-
-
 
 [6]
 
@@ -261,34 +241,30 @@ Underfull \hbox (badness 1127) in paragraph at lines 145--146
 [8]
 
 [9]
-Underfull \hbox (badness 3009) in paragraph at lines 267--268
-[]\OT1/ptm/m/n/12 O \OT1/ptm/b/n/12 Malwa-reby-tes\OT1/ptm/m/n/12 , da Malwa-reby-tes Inc., []e uma fer-ra-menta de-di-cada []a
- []
-
-<imgs/ViruzTotal.png, id=37, 1758.57pt x 821.0675pt>
-File: imgs/ViruzTotal.png Graphic file (type png)
-<use imgs/ViruzTotal.png>
-Package pdftex.def Info: imgs/ViruzTotal.png  used on input line 281.
-(pdftex.def)             Requested size: 426.79135pt x 199.26523pt.
-
-
-[10]
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 307.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 284.
  (C:\Users\uriel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
+<imgs/image.png, id=37, 608.2725pt x 347.79938pt>
+File: imgs/image.png Graphic file (type png)
+<use imgs/image.png>
+Package pdftex.def Info: imgs/image.png  used on input line 316.
+(pdftex.def)             Requested size: 341.43437pt x 195.22803pt.
 
-[11 <./imgs/ViruzTotal.png>]
 
-[12]
+[10 <./imgs/image.png>]
 
-[13] (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.bbl
-Underfull \hbox (badness 1742) in paragraph at lines 49--54
+[11]
+
+[12] (Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.bbl
+
+[13]
+Underfull \hbox (badness 1742) in paragraph at lines 60--65
 []\OT1/ptm/m/n/12 Security In-tel-li-gence.  10 bil-lion in cy-ber crime los-ses shat-ters pre-vi-ous to-tals
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--54
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
 \OT1/ptm/m/n/12 url:https://securityintelligence.com/news/10-billion-in-cyber-crime-losses-shatters-
  []
 
@@ -301,15 +277,15 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4665 strings out of 473682
- 80873 string characters out of 5719215
- 496945 words of memory out of 5000000
- 27670 multiletter control sequences out of 15000+600000
+ 4277 strings out of 473682
+ 72884 string characters out of 5719215
+ 489757 words of memory out of 5000000
+ 27302 multiletter control sequences out of 15000+600000
  577423 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,10n,79p,1195b,356s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/uriel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.pdf" (14 pages, 244914 bytes).
+Output written on "Proteger para Prevenir Avaliação de Métodos Anti-Keylogger em Segurança da Informação.pdf" (14 pages, 176418 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
