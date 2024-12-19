@@ -23,10 +23,11 @@
 \usepackage[utf8]{inputenc}  
 \usepackage{float} % Para usar [H]
 \usepackage{placeins} % Para usar \FloatBarrier
+\usepackage{tikz}
  
 \sloppy
 
-\title{Proteger para Prevenir: Avaliação de Métodos Anti-Keylogger em Segurança da Informação\\ }
+\title{Proteger para Prevenir: Avaliação de Ferramentas Antivirus contra o uso do Keylogger em Segurança da Informação\\ }
 
 \author{Uriel do C. Andrade\inst{1},\\
 Daniel de Oliveira Capanema\inst{1}, \\
@@ -50,12 +51,23 @@ Caixa Postal 1.686 – 30535.901 – Belo Horizonte – MG – Brasil
 
 \begin{resumo}
     % não é texto de ficção. não tem que ter suspense. Colocar no resumo tudo que foi feito e os resultados.
-    Neste artigo, analisamos a eficácia das ferramentas de detecção e mitigação de \textit{keyloggers}, com foco em soluções que estão disponíveis e são amplamente utilizadas pelos usuários finais. Testes internacionais foram realizados em vírus que usam heurística para detectar ameaças: Windows Defender, Avast, AVG, Bitdefender, MalwareBytes e AV Total. Os resultados mostraram diferenças na eficácia da detecção dependendo do formato do arquivo malicioso (por exemplo, \texttt{.exe}, \texttt{.zip}, \texttt{.xlsm}). Embora alguns antivírus façam um bom trabalho no bloqueio de \textit{keyloggers}, outros apresentam sérias fraquezas, especialmente quando se trata de encontrar arquivos e macros maliciosos.  A pesquisa destacou vulnerabilidades nessas ferramentas e reforçou de forma proativa importância de conscientizar os usuários e aprimorar sistemas de segurança para reduzir os riscos de ataques.\end{resumo}
+    Neste artigo, analisamos a eficácia das ferramentas de detecção e mitigação de \textit{keyloggers}, com foco em soluções que estão disponíveis e são amplamente utilizadas pelos usuários finais. Testes internacionais foram realizados em vírus que usam heurística para detectar ameaças: Windows Defender, Avast, AVG, Bitdefender, MalwareBytes e AV Total. Os resultados mostraram diferenças na eficácia da detecção dependendo do formato do arquivo malicioso (por exemplo, \texttt{.exe}, \texttt{.zip}, \texttt{.xlsm}). Embora alguns antivirus façam um bom trabalho no bloqueio de \textit{keyloggers}, outros apresentam sérias fraquezas, especialmente quando se trata de encontrar arquivos e macros maliciosos.  A pesquisa destacou vulnerabilidades nessas ferramentas e reforçou de forma proativa importância de conscientizar os usuários e aprimorar sistemas de segurança para reduzir os riscos de ataques.\end{resumo}
 \section{Introdução}
 
 Nos últimos anos, os avanços tecnológicos, como a popularização dos smartphones e a introdução da inteligência artificial, transformaram a sociedade, tornando-a mais conectada e digital. No entanto, com essas inovações, surgiram também desafios significativos para a segurança cibernética, especialmente com o aumento das ameaças digitais.
 
-Os \textit{malwares}, como os \textit{keyloggers}, são exemplos dessas ameaças. Esses programas maliciosos, que funcionam de forma furtiva, capturam pressionamentos de tecla, expondo os usuários a riscos como roubo de senhas, informações bancárias e outros dados sensíveis. Dada a constante evolução dessas ameaças, é fundamental implementar métodos de defesa cada vez mais eficazes para proteger a privacidade e a segurança dos usuários em um mundo digital em constante transformação.
+\textit{"Na era da Indústria 4.0 (IR 4.0), o vazamento de informações se
+tornou um problema crítico para a segurança da informação."} \citep{bhaharin2019issues}
+
+Os \textit{malwares}, como os \textit{keyloggers}, são um dos exemplos dessas ameaças. 
+Esses programas maliciosos, que funcionam de forma furtiva, capturam pressionamentos de tecla,
+expondo os usuários a riscos de roubo de informações diversas. \textit{"Os dados
+capturados incluem senhas, IDs de usuários, conteúdo de documentos
+e outras informações críticas; portanto, um invasor pode obter dados
+confidenciais sem invadir o banco de dados ou arquivo."} \citep{ahmed2014survey}
+
+Dada a constante evolução dessas ameaças, é fundamental implementar métodos de defesa cada vez mais eficazes para proteger a privacidade e a segurança dos usuários em um mundo digital em constante transformação.
+
 \subsection{Problema}
 
 %algum numero que reforce o problema. No mundo 3 bilhões são perdido por ataques. e colocar referência.
@@ -67,18 +79,25 @@ Apesar dos inúmeros benefícios proporcionados pelos avanços tecnológicos, os
 Dada a confidencialidade destes serviços e a sua capacidade de operar em muitas áreas, é importante desenvolver estratégias eficazes para reduzir estes riscos. É importante analisar e comparar métodos de combate aos \textit{keyloggers} para garantir que os benefícios desta ferramenta não sejam comprometidos pelos perigos que pode causar. Compreender os perigos destes riscos e implementar medidas de segurança fortes é crucial para proteger dados e informações importantes.
 
 \subsection{Objetivo principal}
-O objetivo principal deste trabalho é investigar detalhadamente o funcionamento de \textit{keyloggers} e realizar uma análise comparativa entre diferentes métodos de detecção e mitigação. Busca-se compreender o comportamento desses programas maliciosos e avaliar a eficácia de cada método na identificação e neutralização de \textit{keyloggers}. Por meio de um ambiente controlado, pretende-se fornecer uma visão clara sobre quais abordagens são mais eficazes para proteção contra essa ameaça.
+O objetivo principal deste trabalho é, por meio de um ambiente controlado 
+investigar o funcionamento do \textit{keylogger} 
+e realizar uma análise comparativa entre diferentes ferramentas de detecção e mitigação de vírus.
 
-Esta análise será conduzida comparando diversas ferramentas de proteção, avaliando aspectos como eficiência na detecção, impacto no desempenho do sistema, facilidade de uso, frequência de atualizações, e modelo de licenciamento. Dessa forma, o estudo pretende identificar as soluções mais completas e acessíveis, visando fortalecer as estratégias de segurança digital tanto para profissionais quanto para usuários comuns.
+Esta análise será conduzida comparando 6 ferramentas de proteção, 
+avaliando aspectos como: qual detecta o \textit{keylogger}, 
+sua eficiência na detecção e as medidas tomadas após o keylogger ser identificado. Dessa forma, 
+o estudo pretende identificar as soluções mais completas e acessíveis, visando fortalecer 
+as estratégias de segurança digital tanto para profissionais quanto para usuários comuns.
 
 \subsection{Objetivos específicos}
 
 Os objetivos específicos desta pesquisa são:
 \begin{itemize}
-    \item Criar um ambiente controlado para analisar os mecanismos de operação dos \textit{keyloggers}, observando como eles capturam dados e se mantêm ocultos.
-    \item Identificar e avaliar a eficácia de diversos métodos de detecção e mitigação de \textit{keyloggers}, considerando diferentes abordagens técnicas.
-    \item Realizar uma análise comparativa entre os métodos de detecção, destacando quais são mais eficientes na prevenção de \textit{keyloggers} em diferentes cenários.
-    \item Fornecer recomendações baseadas em resultados empíricos sobre as melhores práticas e estratégias para a detecção e neutralização de \textit{keyloggers}, contribuindo para o aprimoramento da segurança digital.
+    \item Criar um ambiente controlado para analisar os mecanismos de operação dos \textit{keyloggers}, observando como eles capturam dados.
+    \item Avaliar a eficácia de antivirus presentes no mercado quanto a sua detecção e mitigação para os \textit{keyloggers}.
+    \item Realizar uma análise comparativa entre as ferramentas de segurança, destacando quais são mais eficientes na prevenção de \textit{keyloggers} em diferentes cenários.
+    \item Fornecer recomendações baseadas em resultados empíricos sobre os melhores softwares de proteção 
+    na detecção e neutralização de \textit{keyloggers}, contribuindo para o aprimoramento da segurança digital.
 \end{itemize}
 
 \subsection{Contribuições Esperadas}
@@ -110,7 +129,7 @@ Técnica de anti-hook: Esta tecnologia é baseada no uso de ganchos de API, que 
 
 Técnica HoneyID: \citep{10124477} \textit{"É ferramenta capaz de atrair e capturar o invasor, servindo para enganar e monitorar suas atividades"}. Ele opera como um honeypot, criando iscas no sistema para atrair invasores, registrando suas interações suspeitas e coletando informações sobre seus comportamentos.
 
-Detecção Baseada em Assinaturas: É uma técnica usada por antivírus para identificar malware com base em padrões específicos já conhecidos. É eficaz para detectar ameaças registradas, mas não consegue identificar malware novo ou desconhecido \citep{aslan2020comprehensive}.
+Detecção Baseada em Assinaturas: É uma técnica usada por antivirus para identificar malware com base em padrões específicos já conhecidos. É eficaz para detectar ameaças registradas, mas não consegue identificar malware novo ou desconhecido \citep{aslan2020comprehensive}.
 
 \section{Trabalhos relacionados}
 
@@ -126,43 +145,74 @@ Avanços significativos têm sido feitos na detecção e bloqueio de \textit{key
 \subsection{Ambiente}
 Um passo crucial para garantir o sucesso do monitoramento, adaptação e codificação é a seleção cuidadosa das ferramentas adequadas para segurança e implementação.
 
-\subsubsection{Sistema Operacional}
-Para testes, o Ubuntu (24.04) foi selecionado como sistema operacional base devido à sua robustez, estabilidade e atualizações regulares de segurança. A arquitetura baseada em permissões, quando combinada com o VirtualBox, fornece um ambiente seguro e garante os procedimentos necessários para avaliar os métodos de detecção de \textit{keyloggers}.
+Compondo o ambiente de teste como sistema operacional base, 
+o Ubuntu (24.04) foi escolhido, principalmente devido à familiaridade com o SO, 
+o que facilita a execução dos testes e a resolução de possíveis problemas. 
+Além disso, a escolha também se deu pelo fato do Ubuntu ser uma distribuição Linux, 
+pressupondo que este é um sistema operacional seguro no que diz respeito a invasão e contaminação de dispositivos.
 
-\subsubsection{Virtual Box}
-O VirtualBox (7.1.2) foi escolhido pelos benefícios de estabilidade, facilidade de uso e compatibilidade com diversos sistemas. Sua natureza de código aberto, gratuita e com atualizações regulares oferece um ambiente seguro e isolado, ideal para testes de métodos anti-keylogger.
-\subsubsection{Sistema Operacional Virtualizado}
+Para garantir um isolamento adicional e mais segurança, 
+a ferramenta de virtualização (um programa que cria ambientes isolados dentro do computador
+para testes ou execução de diferentes sistemas sem afetar o sistema principal) VirtualBox (7.1.2) foi instalado sob o Ubuntu.
+Ambas as ferramentas foram selecionadas não só pela segurança que proporcionam, 
+mas também pela maior afinidade com elas.
 
-O Windows 10 foi escolhido para os testes devido à sua ampla utilização global, com mais de 60\% de participação no mercado, o que o torna um alvo comum para keyloggers e malware \citep{tomshardware2023}. Essa popularidade torna os testes mais relevantes, refletindo cenários próximos da realidade para análise de proteção contra ameaças.
-
-\subsubsection{Visual studio code}
-O Visual Studio Code (VS Code 1.94), criado pela Microsoft, foi utilizado para analisar o código do keylogger devido à sua versatilidade. Com recursos como realce de sintaxe, pesquisa inteligente e depuração integrada, facilitou a revisão, testes e avaliação do keylogger escolhido para os testes.
+Como Sistema operacional virtualizado, o Windows 10 foi escolhido para os testes devido à sua ampla utilização global,
+com mais de 60\% de participação no mercado, o que o 
+torna um alvo comum para keyloggers e malware \citep{tomshardware2023}. 
+Essa popularidade não apenas torna os testes mais relevantes, mas também
+permite avaliar a eficácia das ferramentas de detecção em um ambiente 
+amplamente explorado por atacantes e amplamente utilizado por usuários, 
+refletindo cenários próximos à realidade.
 
 \subsection{Seleção do \textit{keylogger}}
 Para esta parte do projeto, envolve uma busca e seleção de um código de \textit{keylogger} já existente, que será utilizado como base para a realização dos testes e validações necessárias. O objetivo é encontrar um código que implemente as funcionalidades básicas de um \textit{keylogger}, permitindo assim concentrar esforços nas etapas de testes, depuração e validação, sem a necessidade de desenvolvimento inicial do código. Uma vez identificado o código, as etapas do processo incluem:
 
 \begin{itemize}
     \item \textbf{Análise do Código}: Será realizada uma análise detalhada do código escolhido, buscando entender sua estrutura, funcionalidades e fluxo de execução.
-    \item \textbf{Teste e Depuração}: Serão realizados testes abrangentes para garantir a funcionalidade adequada do \textit{keylogger}, além de ajustes nas partes do código que exigirem correções.
+    \item \textbf{Teste e Depuração}: Para esta etapa, 
+    foi utilizado o Visual Studio Code (1.94), desenvolvido pela Microsoft. 
+    A escolha se deve à familiaridade com a ferramenta e à afinidade com os recursos que seu ambiente 
+    proporciona. Por ser um editor de texto leve e extensível 
+    (ou seja, ele é capaz de ser personalizado com extensões para adicionar  
+    funcionalidades como suporte a linguagens de programação e o IntelliCode), 
+    o VS Code foi fundamental para facilitar os processos de teste e depuração do código do \textit{keylogger}.
     \item \textbf{Implementação de Funcionalidades}: Caso necessário, novas funcionalidades poderão ser implementadas, como a otimização do envio de dados e a melhoria da captura de informações.
     \item \textbf{Build e Distribuição}: Após a validação do código, será realizada a compilação utilizando o \textit{PyInstaller} para gerar um arquivo executável (.exe) que poderá ser utilizado em sistemas Windows.
-    \item \textbf{Teste de Eficiência}: Será realizado um teste de eficiência para verificar o desempenho do \textit{keylogger} e sua capacidade de evadir detecção por antivírus.
+    \item \textbf{Teste de Eficiência}: Será realizado um teste de eficiência para verificar o desempenho do \textit{keylogger} e sua capacidade de evadir detecção por antivirus.
 \end{itemize}
 
-\subsection{Seleção das ferramentas para teste}
-Nesta pesquisa, serão avaliados métodos para interceptar \textit{keyloggers}, com a instalação de ferramentas \textit{anti-malware}. A seleção das ferramentas focará nas mais utilizadas no mercado, especialmente as acessíveis ao público geral, para garantir uma análise representativa da eficácia e usabilidade dessas soluções na detecção de \textit{keyloggers} e outras ameaças de \textit{malware}.
+\subsection{Seleção das ferramentas de antivirus para teste}
+Nesta pesquisa, serão avaliados métodos para interceptar \textit{keyloggers}, 
+com a instalação de ferramentas \textit{anti-malware}. 
+A seleção das ferramentas será baseada nas mais utilizadas no mercado, 
+acessíveis ao público geral e intuitivas. Esse critério visa garantir um teste que apresente
+soluções, que sejam úteis tanto para usuários leigos, quanto para profissionais.
 
-\section{Análise}
-A análise será conduzida com base nos resultados obtidos por meio da aplicação da metodologia Real World Prevention Test, que simula cenários realistas para avaliar a eficácia dos métodos e ferramentas na detecção de \textit{keyloggers}. Essa abordagem permite examinar, de forma prática e contextualizada, o desempenho das soluções em situações que refletem ameaças reais.
+\subsection{Teste das Ferramentas de segurança para Detectar Keyloggers}
+Durante esse processo de teste, os resultados serão obtidos por meio da aplicação 
+da metodologia \textit{Real World Prevention Test} (RWPT), que avalia como as soluções 
+de segurança se comportam em condições que refletem ameaças reais, ou seja, em 
+situações mais próximas daquelas enfrentadas pelos usuários no cotidiano. 
 
-O objetivo é identificar quais ferramentas apresentam o melhor desempenho na detecção e bloqueio de \textit{keyloggers} e destacar a importância de essas soluções estarem em constante evolução para acompanhar as novas ameaças e garantir uma proteção eficaz aos usuários em cenários reais.
-
+Essa abordagem permite examinar, 
+de forma contextualizada, o desempenho das soluções, 
+oferecendo uma avaliação mais precisa de sua eficácia em um cenário real. 
+O critério de avaliação das ferramentas verificará qual delas detecta o \textit{keylogger}, 
+sua eficiência na detecção e as medidas tomadas após o keylogger ser identificado. 
+Para cada método de infecção (.exe, .zip, .xlsm), serão realizados cinco testes por ferramenta, 
+a fim de avaliar a consistência da detecção.
 \section{Desenvolvimento}
 
 \subsection{Configuração do Ambiente}
 
-Durante esta fase, foi instalado o VirtualBox, escolhido para fornecer um ambiente controlado e seguro para os testes. Em seguida, uma imagem \textit{ISO} do Windows 10 foi instalada com sucesso na máquina virtual (\textit{ISO} é um arquivo que contém uma cópia exata do sistema operacional, funcionando como um "arquivo de instalação" que pode ser usado para configurar o sistema). A instalação foi concluída sem problemas, permitindo que o sistema operacional funcionasse adequadamente. Dessa forma, nosso ambiente já estava preparado para rodar os testes.
-
+Durante esta fase, foi instalado o VirtualBox, escolhido para fornecer 
+um ambiente controlado e seguro para os testes. Em seguida, foi instalada 
+com sucesso uma imagem ISO do Windows 10 na máquina virtual (ISO é um arquivo 
+que contém uma cópia exata do sistema operacional, funcionando como um "arquivo 
+de instalação" que pode ser usado para configurar o sistema). 
+A instalação foi concluída sem problemas, permitindo que o sistema operacional 
+funcionasse adequadamente. Dessa forma, o ambiente foi preparado para rodar os testes.
 \subsection{Sobre o código \textit{Keylogger}}
 
 Na busca por um código de \textit{keylogger}, foi encontrado um que atendia aos padrões e objetivos do trabalho. Desenvolvido em Python e disponível no GitHub, o código, criado pelo autor \citep{Aydinnyunus}, foi submetido a um processo de testes, depuração e compilação para garantir sua eficácia e segurança. Este \textit{keylogger} pertence à categoria de \textit{keyloggers} de software, sendo capaz de monitorar entradas do teclado e capturar cliques do mouse. Projetado para roubar os dados coletados, o \textit{keylogger} envia automaticamente as informações por meio de e-mails.
@@ -197,7 +247,12 @@ A funcionalidade do keylogger foi testada e depurada no Visual Studio Code, gara
     \item \textbf{Sincronização}: Foi verificado se o fluxo das threads não causava bloqueios ou perda de dados.
     \item \textbf{Estabilidade}: O \textit{keylogger} foi testado por períodos variados para assegurar sua continuidade sem falhas.
     \item \textbf{Envio de Dados}: A integração com \textit{Mailtrap} foi testada para verificar a formatação e o envio correto dos dados.
-    \item \textbf{Eficiência}: A detecção por antivírus foi analisada no \textit{VirusTotal} para avaliar a evasão e o impacto no sistema.
+    \item \textbf{Eficiência}: A escolha da plataforma VirusTotal auxiliou nesta 
+    etapa para testar a eficiência do keylogger, verificando seu desempenho e 
+    sua capacidade de evadir a detecção por antivírus. O VirusTotal é uma plataforma 
+    que permite a análise de arquivos e URLs para identificar a presença de malware, 
+    operando com a combinação de diversos motores antivírus e ferramentas de detecção.
+    Os resultados desse teste de evasão estão detalhados na Seção 7.1 – Eficiência do \textit{Keylogger}.
 \end{enumerate}
 
 \subsubsection{Build e Distribuição}
@@ -211,22 +266,23 @@ pyinstaller --onefile --noconsole keylogger.py
 O parâmetro \texttt{--noconsole} garantiu que o executável fosse gerado sem abrir janelas de console, aumentando a discrição da aplicação.
 
 \subsection{Métodos de Infecção do \textit{Keylogger}}
-Três métodos principais de infecção (\texttt{.exe}, \texttt{.zip} e \texttt{.xlsm}) foram utilizados para descrever a situação real e avaliar o desempenho auditivo do dispositivo especificado.
+Três métodos principais de infecção (.exe, .zip e .xlsm) 
+foram utilizados para descrever o cenário de mundo real e, com isso, 
+avaliar o desempenho da ferramenta quanto à detecção do \textit{keylogger}.
 
-\subsubsection{.exe: Download Direto do Executável}
-
-O método de download direto do executável envolve o fornecimento do \textit{keylogger} por meio de um arquivo executável baixado da internet. Embora simples, enfrenta desafios devido à detecção por antivírus.
+O método de download direto do executável envolve o fornecimento do \textit{keylogger} por meio de um arquivo executável baixado da internet. Embora simples, enfrenta desafios devido à detecção por antivirus.
 
 \begin{itemize}
     \item \textbf{Link Malicioso}: O usuário é direcionado a um link malicioso, frequentemente por phishing ou e-mails enganosos, que hospeda o executável do \textit{keylogger}.
     \item \textbf{Download}: Ao clicar no link, o arquivo executável é baixado para o sistema da vítima, sendo monitorado por ferramentas de segurança.
     \item \textbf{Execução}: O usuário precisa abrir manualmente o arquivo, o que pode gerar desconfiança se não for disfarçado adequadamente. Após aberto, o \textit{keylogger} começa a capturar dados.
-    \item \textbf{Risco de Detecção}: Este método é altamente arriscado, pois antivírus frequentemente bloqueiam o download de arquivos executáveis maliciosos.
+    \item \textbf{Risco de Detecção}: Este método é altamente arriscado, pois antivirus frequentemente bloqueiam o download de arquivos executáveis maliciosos.
 \end{itemize}
 
-\subsubsection{.xlsm: Planilha Excel com Código VBA}
 
-Foi criada uma planilha Excel com código VBA para instalar e executar o \textit{keylogger}. Ao abrir a planilha, o código VBA instala e executa o \textit{keylogger} silenciosamente, sem alertar o usuário, permitindo a captura de dados de forma discreta.
+Foi criada uma planilha Excel com código VBA de autoria própria como segundo metodo de infecção. 
+Ao abrir a planilha, o código VBA instala e executa o \textit{keylogger} silenciosamente, 
+sem alertar o usuário, permitindo a captura de dados de forma discreta.
 
 \begin{itemize}
     \item \textbf{Execução do Código VBA}: O código VBA é ativado automaticamente ao abrir a planilha e instala o \textit{keylogger}.
@@ -234,124 +290,135 @@ Foi criada uma planilha Excel com código VBA para instalar e executar o \textit
     \item \textbf{Execução do \textit{Keylogger} Silenciosamente}: O \textit{keylogger} é iniciado imediatamente após a instalação e começa a capturar dados.
 \end{itemize}
 
-\subsubsection{.zip: Arquivos Compactados}
-
-O método .zip envolve encapsular o \textit{keylogger} em um arquivo compactado para evitar a detecção durante o download.
+E por ultimo, o método .zip, ele envolve encapsular o \textit{keylogger} em um arquivo compactado para evitar a detecção durante o download.
 
 \begin{itemize}
-    \item \textbf{Compactação}: O executável é compactado, dificultando a detecção por antivírus.
+    \item \textbf{Compactação}: O executável é compactado, dificultando a detecção por antivirus.
     \item \textbf{Descompactação}: O usuário é induzido a descompactar o arquivo, sem levantar suspeitas.
     \item \textbf{Instalação do \textit{Keylogger}}: Após a descompactação, o \textit{keylogger} é executado manualmente, capturando dados.
 \end{itemize}
 
-\subsection{Ferramentas \textit{anti-malware} selecionadas para testes e suas heurísticas}
+\subsection{Ferramentas \textit{anti-malware} selecionadas}
 
-\textbf{Windows Defender, Microsoft, 2005}: Uma ferramenta de segurança integrada ao Windows, oferecendo proteção contra ameaças, gerenciamento de vulnerabilidades e atualização constante para garantir a segurança do sistema \citep{MicrosoftSecurityBlog}.
+\textbf{Windows Defender (10.8750), Microsoft, 2005}: Uma ferramenta de segurança integrada ao Windows, oferecendo proteção contra ameaças, gerenciamento de vulnerabilidades e atualização constante para garantir a segurança do sistema \citep{MicrosoftSecurityBlog}.
 
-\textbf{Avast, Avast Software, 1988}: Famoso por proteger contra ransomware e phishing, oferece monitoramento em tempo real e foco em segurança online, detectando ameaças de forma eficiente \citep{Avast}.
+\textbf{Avast (24.8), Avast Software, 1988}: Famoso por proteger contra ransomware e phishing, oferece monitoramento em tempo real e foco em segurança online, detectando ameaças de forma eficiente \citep{Avast}.
 
-\textbf{AVG, AVG Technologies, agora parte da Avast, 1991}: Focado em segurança online, oferece proteção contra sites e downloads maliciosos, compartilhando a mesma tecnologia do Avast \citep{AVG}.
+\textbf{AVG (24.8), AVG Technologies, agora parte da Avast, 1991}: Focado em segurança online, oferece proteção contra sites e downloads maliciosos, compartilhando a mesma tecnologia do Avast \citep{AVG}.
 
-\textbf{Malwarebytes, Malwarebytes Inc., 2006}: Especializado em detectar malware desconhecido, oferece proteção avançada contra exploits e monitora atividades suspeitas \citep{Malwarebytes}.
+\textbf{Malwarebytes (28.1), Malwarebytes Inc., 2006}: Especializado em detectar malware desconhecido, oferece proteção avançada contra exploits e monitora atividades suspeitas \citep{Malwarebytes}.
 
-\textbf{Total AV, Protected.net Group, 2016}: Conhecido pela precisão na detecção de ameaças e interface amigável, destacando-se pela facilidade de uso e eficácia \citep{TotalAV}.
+\textbf{Total AV (5.3), Protected.net Group, 2016}: Conhecido pela precisão na detecção de ameaças e interface amigável, destacando-se pela facilidade de uso e eficácia \citep{TotalAV}.
 
-\textbf{Bitdefender, LLC 2001}: Fornece proteção abrangente, incluindo recursos adicionais como proteção para redes Wi-Fi e gerenciamento de senhas, destacando-se pela eficácia na detecção de ameaças \citep{Bitdefender}.
+\textbf{Bitdefender (11.0), LLC 2001}: Fornece proteção abrangente, incluindo recursos adicionais como proteção para redes Wi-Fi e gerenciamento de senhas, destacando-se pela eficácia na detecção de ameaças \citep{Bitdefender}.
 
 Essas ferramentas foram escolhidas para os testes, representando uma amostra das soluções contra ameaças como keyloggers, sem incluir todas as principais opções do mercado.
 
 \section{Resultados}
 
 \subsection{Eficiência do \textit{keylogger}}
-
-Os testes avaliaram a capacidade do \textit{keylogger} de evadir antivírus, utilizando o \textit{VirusTotal} para analisar arquivos (\texttt{.exe}, \texttt{.zip}, \texttt{.xlsm}) com diversos motores como Arcabit, Avast, Kaspersky, McAfee e ESET-NOD32.
-
-\FloatBarrier % Força o LaTeX a colocar todas as figuras e tabelas antes de continuar o texto.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        Avast & AVG & Bkav Pro & CrowdStrike Falcon \\
-        \hline
-        DeepInstinct & Elastic & ESET-NOD32 & Kaspersky \\
-        \hline
-        Malwarebytes & SecureAge & SentinelOne (Static ML) & Skyhigh (SWG) \\
-        \hline
-        Zillya & & & \\
-        \hline
-    \end{tabular}
-    \caption{Viruz Total: Ferramentas que detectaram o keylogger exe}
-\end{table}
-
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        Avast                & AVG                    & DeepInstinct           & Elastic                \\ 
-        \hline
-        ESET-NOD32           & Kaspersky              & Malwarebytes           & SentinelOne (Static ML)\\ 
-        \hline
-        Zillya               &                        &                         &                        \\ 
-        \hline
-    \end{tabular}
-    \caption{Viruz Total: Ferramentas que detectaram o keylogger zip}
-\end{table}
-
-
+A tabela a seguir apresenta diversos motores de antivirus 
+que estão disponíveis na plataforma VirusTotal (Seção: 5.2.2 – Teste e depuração). O princípio 
+do teste é realizar o upload dos três métodos diferentes de infecção 
+contendo o \textit{keylogger} e ver quais motores são capazes de identificar os arquivos como vírus. 
+Essa análise é crucial para determinar o potencial do \textit{keylogger} frente aos
+sistemas de segurança, antes de avançarmos para o teste de RWPT.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Elastic                & Google                & VirIT                 \\ 
+        \textbf{Avast \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{AVG \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Bkav Pro \tikz\fill[red] (0,0) circle (3pt); } \\
+        \hline
+        \textbf{CrowdStrike Falcon \tikz\fill[red] (0,0) circle (3pt); } & \textbf{DeepInstinct \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Elastic \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[black] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt);} \\
+        \hline
+        \textbf{ESET-NOD32 \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Kaspersky \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Malwarebytes \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } \\
+        \hline
+        \textbf{SecureAge \tikz\fill[red] (0,0) circle (3pt); } & \textbf{SentinelOne Static ML \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Skyhigh SWG \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[black] (0,0) circle (3pt);} \\
+        \hline
+        \textbf{Zillya \tikz\fill[red] (0,0) circle (3pt); \tikz\fill[blue] (0,0) circle (3pt); } & \textbf{Acronis Static ML \tikz\fill[red] (0,0) circle (3pt); } & \textbf{AhnLab-V3} \\
+        \hline
+        \textbf{Alibaba} & \textbf{AliCloud} & \textbf{ALYac} \\
+        \hline
+        \textbf{Antiy-AVL} & \textbf{Arcabit} & \textbf{Avira no cloud} \\
+        \hline
+        \textbf{Baidu} & \textbf{BitDefender} & \textbf{ClamAV} \\
+        \hline
+        \textbf{CMC} & \textbf{CTX} & \textbf{Cylance} \\
+        \hline
+        \textbf{Cynet} & \textbf{DrWeb} & \textbf{Emsisoft} \\
+        \hline
+        \textbf{eScan} & \textbf{Fortinet} & \textbf{GData} \\
+        \hline
+        \textbf{Google \tikz\fill[black] (0,0) circle (3pt);} & \textbf{Gridinsoft no cloud} & \textbf{Huorong} \\
+        \hline
+        \textbf{Ikarus} & \textbf{Jiangmin} & \textbf{K7AntiVirus} \\
+        \hline
+        \textbf{K7GW} & \textbf{Kingsoft} & \textbf{Lionic} \\
+        \hline
+        \textbf{MaxSecure} & \textbf{McAfee Scanner} & \textbf{Microsoft} \\
+        \hline
+        \textbf{NANO-Antivirus} & \textbf{Palo Alto Networks} & \textbf{Panda} \\
+        \hline
+        \textbf{QuickHeal} & \textbf{Rising} & \textbf{Sangfor Engine Zero} \\
+        \hline
+        \textbf{Sophos} & \textbf{SUPERAntiSpyware} & \textbf{Symantec} \\
+        \hline
+        \textbf{TACHYON} & \textbf{TEHTRIS} & \textbf{Tencent} \\
+        \hline
+        \textbf{Trapmine} & \textbf{Trellix ENS} & \textbf{Trellix HX} \\
+        \hline
+        \textbf{TrendMicro} & \textbf{TrendMicro-HouseCall} & \textbf{Trustlook} \\
+        \hline
+        \textbf{Varist} & \textbf{VBA32} & \textbf{VIPRE} \\
+        \hline
+        \textbf{VirIT \tikz\fill[black] (0,0) circle (3pt);} & \textbf{ViRobot} & \textbf{Webroot} \\
+        \hline
+        \textbf{WithSecure} & \textbf{Xcitium} & \textbf{Yandex} \\
+        \hline
+        \textbf{Zoner} & \textbf{Avast-Mobile} & \textbf{BitDefenderFalx} \\
+        \hline
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Quantidade de antivirus Testados: 75}} \\
         \hline
     \end{tabular}
-    \caption{Viruz Total: Ferramentas que detectaram o keylogger xlsm}
+    \caption{Ferramentas \textit{anti-malwares} que detectaram o keylogger nos diferentes formatos.}
 \end{table}
 
+\begin{flushleft}
+    \textbf{Legenda:} \\
+    \textbf{\tikz\fill[red] (0,0) circle (3pt);} - Ferramenta que detectou o keylogger no exe\\
+    \textbf{\tikz\fill[blue] (0,0) circle (3pt);} - Ferramenta que detectou o keylogger no zip\\
+    \textbf{\tikz\fill[black] (0,0) circle (3pt);} - Ferramenta que detectou o keylogger no xlsm
+\end{flushleft}
+Os resultados obtidos pelo VirusTotal confirmam os testes realizados neste estudo, 
+reforçando a confiabilidade da plataforma na detecção de malware. A diversidade de motores 
+antivírus presentes na ferramenta demonstra sua eficácia na análise de ameaças. Apesar disso, 
+o keylogger se mostrou eficiente em evadir a detecção de diversos antivírus, evidenciando sua 
+capacidade de operar de forma furtiva. Pode-se observar que, quanto mais complexo o método de infecção, 
+menor a capacidade dos antivírus em detectar a ameaça, especialmente quando o keylogger utiliza técnicas 
+avançadas, como ofuscação de código, exploração de vulnerabilidades e incorporação em arquivos legítimos.
+\subsection{Tabelas de resultados dos testes de RWPT em maquina}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{imgs/exetabelaresultado.png} 
+    \caption{Gráfico de resultados dos testes de keylogger .exe em máquina.}
+\end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{imgs/image.png} % Substitua pelo caminho da imagem
-    \caption{Relação representativa da quantidade de ferramentas que detectaram o keylogger nos 3 tipos de arquivos}
+    \includegraphics[width=1.0\textwidth]{imgs/ziptabelaresultado.png} 
+    \caption{Gráfico de resultados dos testes de keylogger zip em máquina.}
 \end{figure}
-Os resultados obtidos pelo VirusTotal confirmam os testes realizados neste estudo, reforçando a confiabilidade da plataforma na detecção de \textit{malware}. A diversidade de motores antivírus presentes na ferramenta demonstra sua eficácia na análise de ameaças. Apesar disso, o \textit{keylogger} se mostrou eficiente em evadir a detecção de diversos antivírus, evidenciando sua capacidade de operar de forma furtiva em cenários variados. Além disso, pode-se observar que, quanto mais complexo o método de infecção, menor a capacidade dos antivírus em detectar a ameaça. Isso destaca a importância de uma avaliação abrangente das ferramentas de segurança para detectar e mitigar novas ameaças.
-\subsection{Tabela de resultados dos testes em maquina}
-Os resultados a seguir foram obtidos a partir de testes realizados com a metodologia "Real World Prevention Test", onde cada método de infecção foi simulado cinco vezes em cada ferramenta \textit{anti-malware}, a fim de avaliar a eficiência de detecção e prevenção do \textit{keylogger}.
-\begin{table}[h!]
+
+\begin{figure}[H]
     \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \textbf{Ferramentas} & \textbf{Versão} & \textbf{.exe} & \textbf{.zip}      & \textbf{.xlsm} \\
-        \hline
-        Windows Defender     & 10.8750    & Sucesso       & Intermediário +    & Fracasso       \\
-        \hline
-        Avast                & 24.8      & Sucesso +     & Intermediário ++++ & Sucesso ++     \\
-        \hline
-        AVG                  & 24.8      & Sucesso +     & Intermediário ++++ & Sucesso +++    \\
-        \hline
-        Bit Defender         & 28.1      & Sucesso +     & Intermediário ++   & Sucesso +++    \\
-        \hline
-        MalwareBytes         & 5.3       & Sucesso       & Intermediário      & Sucesso ++     \\
-        \hline
-        Total AV             & 11.0         & Sucesso +     & Intermediário +++  & Sucesso +++    \\
-        \hline
-    \end{tabular}\\
-
-    \caption{Ferramentas de detecção e suas mitigações}
-
-\end{table}
-\begin{flushleft}
-    \textbf{Legenda:} \\
-    \textbf{Sucesso} - Detectou o programa malicioso imediatamente.\\
-    \textbf{Intermediário} - Detectou após múltiplas tentativas ou etapas.\\
-    \textbf{Fracasso} - De forma alguma conseguiu detectar o programa malicioso.\\
-    \textbf{+} - Indica maior eficiência. Quanto mais símbolos, mais rápida e eficaz é a detecção. Nenhum + indica o sistema menos eficiente, e ++++ representa o mais eficiente.
-\end{flushleft}
+    \includegraphics[width=1.0\textwidth]{imgs/xlsmtabelaresultado.png} 
+    \caption{Gráfico de resultados dos testes de keylogger xlsm em máquina.}
+\end{figure}
 
 
-\subsection{Observações dos resultados}
+
+\subsection*{Detalhes dos resultados}
 Windows Defender:
 \begin{itemize}
     \item \textbf{Arquivo \texttt{.exe}}: A detecção é inconsistente. Em 40\% dos casos, o arquivo malicioso é detectado, enquanto nos outros não. No entanto, em todos os casos, a execução é bloqueada com um aviso de programa malicioso.
@@ -397,30 +464,30 @@ Windows Defender:
     \item \textbf{Arquivo \texttt{.xlsm}}: Bloqueia o acesso do código VBA aos diretórios da máquina, impedindo o download e a execução do código.
 \end{itemize}
 
-Nenhum dos programas antivírus testados detecta o arquivo \texttt{.xlsm} como malicioso, nem o conteúdo do arquivo \texttt{.zip} durante o primeiro momento de download.
+\noindent Nenhum dos programas antivirus testados detecta o arquivo \texttt{.xlsm} como malicioso, nem o conteúdo do arquivo \texttt{.zip} durante o primeiro momento de download.
 
-\section{Conclusão}
+\section{Conclusão e trabalhos futuros}
+Com base nos resultados obtidos neste trabalho, 
+é possível concluir que os diferentes motores de antivírus 
+apresentam níveis variados de eficácia na detecção de um \textit{keylogger}, 
+dependendo do formato do arquivo e das técnicas empregadas para sua ocultação. 
+Os testes realizados com os métodos de infecção em formato \texttt{.exe}, 
+\texttt{.zip} e \texttt{.xlsm} demonstraram que, quanto mais complexas são as 
+técnicas de infecção --- como ofuscação de código e uso de macros em documentos 
+legítimos ---, maior é a dificuldade dos sistemas de segurança em identificá-las.  
 
-De acordo com os resultados obtidos, verifica-se que a eficácia da proteção varia dependendo do método de infecção utilizado pelo \textit{keylogger} e do tipo de arquivos maliciosos.
+Os antivírus \textbf{Avast}, \textbf{AVG}, \textbf{Total AV} e \textbf{Bitdefender} se destacaram como os mais eficazes em diferentes cenários:  
+\begin{itemize}
+    \item Para o formato \texttt{.exe}, todos os quatro foram capazes de detectar e bloquear o \textit{keylogger} durante o download ou a execução, impedindo seu funcionamento.  
+    \item No caso de arquivos compactados (\texttt{.zip}), \textbf{Avast} e \textbf{AVG} demonstraram eficiência ao identificar o conteúdo malicioso após a extração.  
+    \item Para o formato \texttt{.xlsm}, \textbf{Bitdefender}, \textbf{AVG} e \textbf{Total AV} foram os mais eficazes, bloqueando o acesso do código VBA aos diretórios da máquina, embora nenhum tenha conseguido identificar o conteúdo malicioso de maneira totalmente proativa.  
+\end{itemize}    
 
-\noindent\textbf{Arquivos \texttt{.exe}:} Avast, AVG e Total AV bloquearam 100\% dos arquivos, enquanto o Windows Defender teve desempenho inconsistente.
-
-\noindent\textbf{Arquivos \texttt{.zip}:} Embora algumas ferramentas detectassem o \textit{malware} após extração, a proteção foi insuficiente durante o download do arquivo compactado.
-
-\noindent\textbf{Arquivos \texttt{.xlsm}:} Nenhum antivírus detectou o arquivo diretamente, mas ferramentas como Avast e AVG bloquearam o código VBA malicioso subsequente.
-
-\subsection*{Interpretação dos Dados}
-A detecção eficaz depende de métodos heurísticos e comportamentais. A falha na detecção de arquivos \texttt{.zip} e \texttt{.xlsm} destaca vulnerabilidades.
-
-\subsection*{Síntese Final}
-Aplicativos como Avast, AVG e Bitdefender se destacaram na detecção de diferentes tipos de ameaças, incluindo \textit{keyloggers}, enquanto o Windows Defender demonstrou vantagens significativas, especialmente na detecção de arquivos compactados e macros. A análise do comportamento do \textit{keylogger} mostrou que:
-
-A detecção rápida é essencial para prevenir a execução de códigos maliciosos, como keyloggers. 
-O método de transferência utilizando arquivos .xlsm continua sendo uma vulnerabilidade em muitos 
-programas antivírus, facilitando a propagação de keyloggers. Para o tipo de malware utilizado neste 
-estudo, o resultado encontrado foi que a detecção foi mais eficaz em ferramentas com técnicas de 
-heurística aprimoradas. Portanto, o estudo evidenciou a necessidade de melhorias nos métodos de detecção 
-heurística, além do desenvolvimento de estratégias de conscientização do usuário para mitigar os riscos associados a keyloggers e outros arquivos maliciosos.
+Em trabalhos futuros, a aplicação da técnica de engenharia reversa a \textit{keyloggers} pode 
+proporcionar uma compreensão mais aprofundada de suas estruturas internas e métodos de evasão, 
+o que contribuiria para o desenvolvimento de assinaturas e padrões de detecção mais eficazes. Além disso, 
+testar keyloggers utilizando métodos de infecção mais eficientes, 
+como contaminação por rede, pode ajudar a fortalecer ainda mais o cenário da segurança digital.
 
 
 \bibliographystyle{plainnat}
